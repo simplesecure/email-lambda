@@ -1,0 +1,39 @@
+# serverless.yml
+
+service: simpleid-email-service-lambda
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: us-west-2
+
+functions:
+  app:
+    handler: index.handler
+    vpc:
+      securityGroupIds:
+        - sg-063e9417456f2be7c
+      subnetIds:
+        - subnet-0f621d91a391cebe4
+        - subnet-0baf7289e73106eab
+        - subnet-0e0b5a50f4068b364
+    events:
+      - http:
+          method: get
+          path: /v1/hello
+      - http:
+          method: post
+          path: /v1/email
+          cors:
+            origin: '*'
+            headers:
+             - Origin
+             - Authorization
+             - X-Requested-With
+             - Content-Type
+             - Accept
+             - X-Auth-Token
+            allowCredentials: true
