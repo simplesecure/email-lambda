@@ -60,7 +60,7 @@
     "@types/express-winston": "^3.0.1",
     "@types/node": "^11.13.8",
     "@types/ripemd160": "^2.0.0",
-    "ajv": "^4.11.5",
+    "ajv": "^6.12.3",
     "amplitude": "^4.0.0",
     "atob": "^2.1.2",
     "aws-sdk": "^2.603.0",
