@@ -43,7 +43,7 @@
     "fetch-mock": "^5.5.0",
     "mock-local-storage": "^1.0.5",
     "nock": "^9.1.6",
-    "node-fetch": "^2.1.2",
+    "node-fetch": "^2.6.7",
     "opn": "^4.0.2",
     "proxyquire": "^1.8.0",
     "serverless-offline": "^5.12.0",
